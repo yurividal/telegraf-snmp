@@ -16,7 +16,4 @@ RUN export  DEBIAN_FRONTEND=noninteractive && \
     apt-get update && \
     apt-get -y install snmp snmpd snmp-mibs-downloader && \
     rm -r /var/lib/apt/lists/*
-    
-COPY UBNT-FROGFOOT-RESOURCES-MIB.mib /usr/share/snmp/mibs/
-COPY UBNT-MIB /usr/share/snmp/mibs/
-COPY UBNT-UniFi-MIB /usr/share/snmp/mibs/
+
