@@ -14,5 +14,5 @@ RUN export  DEBIAN_FRONTEND=noninteractive && \
      echo "deb http://security.debian.org ${DEBIAN_RELEASE}/updates main contrib non-free"  >> /etc/apt/sources.list && \
     set -x &&\
     apt-get update && \
-    apt-get -y install python python-pip snmp snmpd snmp-mibs-downloader && \
+    apt-get -y install python python-pip snmp snmpd snmp-mibs-downloader nano && \
     rm -r /var/lib/apt/lists/*
