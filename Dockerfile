@@ -14,5 +14,7 @@ RUN export  DEBIAN_FRONTEND=noninteractive && \
      echo "deb http://security.debian.org ${DEBIAN_RELEASE}/updates main contrib non-free"  >> /etc/apt/sources.list && \
     set -x &&\
     apt-get update && \
-    apt-get -y install python python-pip snmp snmpd snmp-mibs-downloader nano && \
+    apt-get -y install python python-pip snmp snmpd snmp-mibs-downloader nano zip && \
     rm -r /var/lib/apt/lists/*
+    download-mibs
+    service telegraf start
