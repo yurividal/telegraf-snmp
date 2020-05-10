@@ -16,5 +16,7 @@ RUN export  DEBIAN_FRONTEND=noninteractive && \
     apt-get update && \
     apt-get -y install python python-pip snmp snmpd snmp-mibs-downloader nano zip && \
     rm -r /var/lib/apt/lists/* && \
-    download-mibs && \
-    service telegraf start
+    download-mibs
+ 
+ ENTRYPOINT service telegraf start && \
+          /bin/bash
